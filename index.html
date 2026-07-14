@@ -96,11 +96,11 @@
   ========================================================= */
   #invite{ background:var(--blush); }
   .om{ font-size:34px; color:var(--gold); margin-bottom:6px; }
-  .invocation{ font-size:15px; letter-spacing:1px; color:var(--maroon); margin-bottom:26px; font-style:italic; }
+  .invocation{ font-size:15px; letter-spacing:1px; color:var(--maroon); margin-bottom:26px; font-:italic; }
   .invite-heading{ font-size:16px; letter-spacing:3px; text-transform:uppercase; color:var(--maroon); margin-bottom:14px; }
   .names{ font-size:52px; color:var(--maroon); line-height:1.3; }
   .names small{ display:block; font-family:'Cormorant Garamond',serif; font-size:16px; letter-spacing:1px; color:#7a5240; margin:2px 0 14px; }
-  .amp{ font-size:26px; color:var(--gold); margin:6px 0; font-family:'Cormorant Garamond', serif; font-style:italic; }
+  .amp{ font-size:26px; color:var(--gold); margin:6px 0; font-family:'Cormorant Garamond', serif; font-:italic; }
   .invited-by{ margin-top:26px; font-size:14px; color:#7a5240; }
 
   /* =========================================================
@@ -156,7 +156,15 @@
      5. GALLERY
   ========================================================= */
   #gallery{ background:var(--cream); }
-  .gallery-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:10px; max-width:340px; margin:0 auto; }
+ .gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+  width:100%;
+  max-width:340px;
+  margin:0 auto;
+  box-sizing:border-box;
+}
   .gallery-grid div{
     aspect-ratio:1/1; border-radius:2px; border:1px solid var(--gold);
     background:linear-gradient(135deg,#f0d7c9,#e8bfae);
@@ -184,7 +192,7 @@
     font-weight:600; letter-spacing:1px; font-size:13px; text-transform:uppercase;
   }
   footer{ background:var(--maroon-dark); color:var(--gold-light); text-align:center; padding:24px; font-size:12px; letter-spacing:1px; }
-</style>
+</>
 </head>
 <body>
 
@@ -216,7 +224,7 @@
   <p class="invocation">|| Shree Ganeshay Namah ||</p> <!-- EDIT: change invocation line if you like -->
 
   <p class="invite-heading">Together with their families</p>
-  <p style="font-size:14px; color:#7a5240; margin-bottom:22px;">we joyfully invite you to the Ring Ceremony of</p>
+  <p ="font-size:14px; color:#7a5240; margin-bottom:22px;">we joyfully invite you to the Ring Ceremony of</p>
 
   <div class="names">
     Aishwarya Dwivedi <!-- EDIT: bride's name -->
@@ -315,10 +323,10 @@
     const p = document.createElement('div');
     p.className='petal';
     p.textContent = glyphs[i % glyphs.length];
-    p.style.left = Math.random()*100 + 'vw';
-    p.style.animationDuration = (8 + Math.random()*10) + 's';
-    p.style.animationDelay = (Math.random()*10) + 's';
-    p.style.fontSize = (14 + Math.random()*14) + 'px';
+    p..left = Math.random()*100 + 'vw';
+    p..animationDuration = (8 + Math.random()*10) + 's';
+    p..animationDelay = (Math.random()*10) + 's';
+    p..fontSize = (14 + Math.random()*14) + 'px';
     petalHost.appendChild(p);
   }
 
@@ -338,9 +346,9 @@
     const box = canvas.parentElement.getBoundingClientRect();
     canvas.width = box.width;
     canvas.height = box.height;
-    ctx.fillStyle = '#c9a24a';
+    ctx.fill = '#c9a24a';
     ctx.fillRect(0,0,canvas.width,canvas.height);
-    ctx.fillStyle = '#6d1f2b';
+    ctx.fill = '#6d1f2b';
     ctx.font = '600 16px Poppins, sans-serif';
     ctx.textAlign = 'center';
     ctx.fillText('SCRATCH HERE', canvas.width/2, canvas.height/2 - 8);
